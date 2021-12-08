@@ -1,0 +1,55 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#contenedor{
+    -fx-background-color: #00B050
+}
+
+#titulo{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 25px;
+}
+
+.tituloField{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+}
+
+.detallesField{
+    -fx-text-fill: red;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 15px;
+}
+
+#btnGuardar{
+    -fx-background-color: white;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnCancelar{
+    -fx-background-color: white;
+    -fx-border-radius: 13px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnGuardar:hover{
+    -fx-background-color: #3042E3;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white
+}
+
+#btnCancelar:hover{
+    -fx-background-color: #FA4182;
+    -fx-border-radius: 13px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white
+}

@@ -1,0 +1,41 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#contenedor{
+    -fx-background-color: #00B050
+}
+
+#titulo{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+}
+
+#btnCrear{
+    -fx-background-color: white;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnCrear:hover{
+    -fx-background-color: #3042E3;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnConsultar{
+    -fx-background-color: white;
+    -fx-border-radius: 9px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnConsultar:hover{
+    -fx-background-color: #FA4182;
+    -fx-border-radius: 9px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}

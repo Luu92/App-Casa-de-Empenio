@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPrestamoFXMLController">
+    <stylesheets>
+        <URL value="@/mx/edu/uacm/estilosCSS/gestionarprestamofxml.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="350.0" prefWidth="600.0">
+         <children>
+            <Pane id="contenedor" prefHeight="96.0" prefWidth="600.0" stylesheets="@../estilosCSS/gestionarprestamofxml.css">
+               <children>
+                  <Label id="titulo" layoutX="14.0" layoutY="40.0" prefHeight="29.0" prefWidth="283.0" stylesheets="@../estilosCSS/gestionarprestamofxml.css" text="Seleccione una opción: " />
+               </children>
+            </Pane>
+            <Pane prefHeight="254.0" prefWidth="597.0">
+               <children>
+                  <Button id="btnCrear" fx:id="btnCrear" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="194.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#crearPrestamo" prefHeight="161.0" prefWidth="144.0" stylesheets="@../estilosCSS/gestionarprestamofxml.css" text="Crear Préstamo" />
+                  <Button id="btnConsultar" fx:id="btnConsultar" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="402.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#consultarPrestamo" prefHeight="161.0" prefWidth="144.0" stylesheets="@../estilosCSS/gestionarprestamofxml.css" text="Consultar Préstamo" />
+                  <ImageView fitHeight="96.0" fitWidth="94.0" layoutX="427.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/dar-dinero.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="111.0" fitWidth="103.0" layoutX="215.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/consulta.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="btnRegresar" fitHeight="76.0" fitWidth="83.0" layoutX="62.0" layoutY="89.0" onMouseClicked="#regresarVentana" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/flecha-izquierda.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="titulo" layoutX="62.0" layoutY="170.0" prefHeight="29.0" prefWidth="109.0" stylesheets="@../estilosCSS/gestionarprestamofxml.css" text="Regresar" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

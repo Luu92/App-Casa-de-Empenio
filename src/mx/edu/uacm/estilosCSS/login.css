@@ -1,7 +1,35 @@
 /*
  * Empty Stylesheet file.
  */
+.contenedor{
+    -fx-background-color: #00B050
+}
 
-.mainFxmlClass {
+@font-face{
+    font-family: prueba;
+    src: url("MavenPro-Black.ttf");
+}
 
+
+.titulo{
+    -fx-text-fill: white;
+    -fx-font-family: "prueba";
+    -fx-font-size: 20px;
+}
+
+.btnLogin{
+    -fx-border-radius: 15px;
+    -fx-background-color: #28352b;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-border-color: white
+}
+
+.btnLogin:hover{
+    -fx-border-radius: 15px;
+    -fx-background-color: #00B050;
+    -fx-text-fill: black;
+    -fx-font-size: 18px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
 }

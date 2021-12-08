@@ -23,7 +23,7 @@ public class CasaEmpeño extends Application {
     public void start(Stage arg0) throws Exception {
 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPrestamoCrearFXML.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             arg0.setScene(scene);
