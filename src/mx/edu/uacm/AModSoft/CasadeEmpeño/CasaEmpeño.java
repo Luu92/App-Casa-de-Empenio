@@ -18,7 +18,6 @@ import javafx.stage.Stage;
  * @author Internet
  */
 public class CasaEmpeño extends Application {
-
     @Override
     public void start(Stage arg0) throws Exception {
 
@@ -36,6 +35,8 @@ public class CasaEmpeño extends Application {
         }
 
     }
+    
+
 
     /**
      * @param args the command line arguments

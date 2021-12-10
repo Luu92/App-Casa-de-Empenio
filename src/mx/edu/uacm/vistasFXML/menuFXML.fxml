@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,8 +8,42 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.MenuFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="mx.edu.uacm.controladoresFXML.MenuFXMLController">
     <stylesheets>
-        <URL value="@/mx/edu/uacm/estilosCSS/menufxml.css"/>
+        <URL value="@/mx/edu/uacm/estilosCSS/menufxml.css" />
     </stylesheets>
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane id="contenedor" prefHeight="100.0" prefWidth="600.0" stylesheets="@../estilosCSS/menufxml.css">
+               <children>
+                  <Label id="titulo" layoutX="29.0" layoutY="33.0" prefHeight="29.0" prefWidth="145.0" stylesheets="@../estilosCSS/menufxml.css" text="Bienvenido: " />
+                  <Label id="nombreUsuario" layoutX="174.0" layoutY="33.0" text="Label" />
+               </children>
+            </Pane>
+            <Pane prefHeight="344.0" prefWidth="600.0">
+               <children>
+                  <Button id="btnGesPersonal" alignment="BOTTOM_CENTER" layoutX="33.0" layoutY="89.0" mnemonicParsing="false" prefHeight="160.0" prefWidth="145.0" stylesheets="@../estilosCSS/menufxml.css" text="Gestionar Personal" />
+                  <Button id="btnGestionarCompra" alignment="BOTTOM_CENTER" layoutX="228.0" layoutY="89.0" mnemonicParsing="false" prefHeight="160.0" prefWidth="145.0" stylesheets="@../estilosCSS/menufxml.css" text="Gestionar Compra" />
+                  <Button id="btnGesPrestamo" alignment="BOTTOM_CENTER" layoutX="419.0" layoutY="89.0" mnemonicParsing="false" prefHeight="160.0" prefWidth="145.0" stylesheets="@../estilosCSS/menufxml.css" text="Gestionar Préstamo" textAlignment="CENTER" wrapText="true" />
+                  <ImageView fitHeight="101.0" fitWidth="94.0" layoutX="59.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/personal.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="114.0" fitWidth="94.0" layoutX="253.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/verificar.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="94.0" fitWidth="94.0" layoutX="445.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/prestamo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>

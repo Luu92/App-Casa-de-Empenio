@@ -7,7 +7,11 @@ package mx.edu.uacm.controladoresFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.Initializable;
+import javafx.stage.Stage;
+import mx.edu.uacm.AModSoft.CasadeEmpeño.CasaEmpeño;
 
 /**
  * FXML Controller class
@@ -16,12 +20,15 @@ import javafx.fxml.Initializable;
  */
 public class MenuFXMLController implements Initializable {
 
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
     }    
+    
+    
     
 }

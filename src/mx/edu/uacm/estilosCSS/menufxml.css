@@ -2,6 +2,62 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
+#contenedor{
+    -fx-background-color: #00B050
+}
+#nombreUsuario{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+}
 
+#titulo{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 20px;
+}
+
+#btnGesPersonal{
+    -fx-background-color: white;
+    -fx-border-radius: 13px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnGestionarCompra{
+    -fx-background-color: white;
+    -fx-border-radius: 13px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnGesPrestamo{
+    -fx-background-color: white;
+    -fx-border-radius: 13px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnGesPersonal:hover{
+    -fx-background-color: #3042E3;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white
+}
+
+#btnGestionarCompra:hover{
+    -fx-background-color: #FA4182;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white
+}
+
+#btnGesPrestamo:hover{
+    -fx-background-color: #13BABD;
+    -fx-border-radius: 9px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white
 }
