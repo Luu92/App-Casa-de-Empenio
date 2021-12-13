@@ -58,7 +58,7 @@ public class GestionarPrestamoConsultarFXMLController implements Initializable {
     @FXML
     private void bucarPrestamo(ActionEvent event) {
         
-        Cliente nuevoCliente = new Cliente(nombre, apellido);
+        
         
     }
     

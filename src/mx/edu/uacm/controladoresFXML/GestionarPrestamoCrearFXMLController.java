@@ -77,6 +77,7 @@ public class GestionarPrestamoCrearFXMLController implements Initializable {
         Aval nuevoAval = new Aval(avalNombre.getText(),avalApellido.getText());
         Prestamo nuevoPrestamo = new Prestamo();
         float solicitado = Float.valueOf(cantidadField.getText());
+        float totalPago = solicitado;
         
     }
 

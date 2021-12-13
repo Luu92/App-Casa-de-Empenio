@@ -15,18 +15,18 @@ public class Prestamo {
     private Cliente cliente;
     private Aval aval;
     private float montoSolicitado; 
-    private float totaPago;
+    private float totalPago;
     private int periodo;
 
     public Prestamo() {
     }
 
-    public Prestamo(String id, Cliente cliente, Aval aval, float montoSolicitado, float totaPago, int periodo) {
+    public Prestamo(String id, Cliente cliente, Aval aval, float montoSolicitado, float totalPago, int periodo) {
         this.id = id;
         this.cliente = cliente;
         this.aval = aval;
         this.montoSolicitado = montoSolicitado;
-        this.totaPago = totaPago;
+        this.totalPago = totalPago;
         this.periodo = periodo;
     }
 
@@ -63,11 +63,11 @@ public class Prestamo {
     }
 
     public float getTotaPago() {
-        return totaPago;
+        return totalPago;
     }
 
-    public void setTotaPago(float totaPago) {
-        this.totaPago = totaPago;
+    public void setTotaPago(float totalPago) {
+        this.totalPago = totalPago;
     }
 
     public int getPeriodo() {
