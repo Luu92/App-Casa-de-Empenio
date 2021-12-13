@@ -1,0 +1,46 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#contenedor{
+    -fx-background-color: #00B050
+}
+
+.titulo{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 30px;
+}
+
+.tituloEtiquetas{
+    -fx-text-fill: black;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 13px;
+}
+
+#buscarFolio{
+    -fx-text-alignment: center;
+    -fx-text-fill: red;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 15px;
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+
+#btnBuscar{
+    -fx-border-radius: 12px;
+    -fx-background-color: #00B050;
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+    -fx-border-color: white;
+    -fx-font-family: "Arial Black"
+}
+#btnBuscar:hover{
+    -fx-border-radius: 15px;
+    -fx-background-color: #3042E3;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-border-color: white;
+    -fx-font-family: "Arial Black"
+}

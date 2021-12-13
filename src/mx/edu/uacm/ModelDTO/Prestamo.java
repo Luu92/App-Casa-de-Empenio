@@ -1,0 +1,83 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mx.edu.uacm.ModelDTO;
+
+/**
+ *
+ * @author Internet
+ */
+public class Prestamo {
+    
+    private String id;
+    private Cliente cliente;
+    private Aval aval;
+    private float montoSolicitado; 
+    private float totaPago;
+    private int periodo;
+
+    public Prestamo() {
+    }
+
+    public Prestamo(String id, Cliente cliente, Aval aval, float montoSolicitado, float totaPago, int periodo) {
+        this.id = id;
+        this.cliente = cliente;
+        this.aval = aval;
+        this.montoSolicitado = montoSolicitado;
+        this.totaPago = totaPago;
+        this.periodo = periodo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Aval getAval() {
+        return aval;
+    }
+
+    public void setAval(Aval aval) {
+        this.aval = aval;
+    }
+
+    public float getMontoSolicitado() {
+        return montoSolicitado;
+    }
+
+    public void setMontoSolicitado(float montoSolicitado) {
+        this.montoSolicitado = montoSolicitado;
+    }
+
+    public float getTotaPago() {
+        return totaPago;
+    }
+
+    public void setTotaPago(float totaPago) {
+        this.totaPago = totaPago;
+    }
+
+    public int getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
+    
+    
+    
+}

@@ -38,6 +38,10 @@ public class LoginController implements Initializable {
     @FXML
     private PasswordField etiquetaContra;
 
+    public TextField getEtiquetaUsuario() {
+        return etiquetaUsuario;
+    }
+    
     /**
      * Initializes the controller class.
      */
@@ -45,67 +49,22 @@ public class LoginController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    public void mostrarMensaje(ActionEvent event){
-        Pattern expresion = Pattern.compile("^[a-z]{5}[0-9]{1,2}");
-        Matcher validator = expresion.matcher(etiquetaUsuario.getText());
-        if(!etiquetaUsuario.getText().isEmpty() && validator.matches() && !etiquetaContra.getText().isEmpty()){
-            /*En esta parte metemos la vista*/
-            try {
-                
-                Parent root = FXMLLoader.load(getClass().getResource("menuFXML.fxml"));
-                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-                /*
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("menuFXML.fxml"));
-                Parent root = loader.load();
-               // MenuFXMLController ventanaMenu = (MenuFXMLController)loader.getController();
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-                Stage nuevoStage = (Stage) btnLogin.getScene().getWindow();
-                nuevoStage.close();*/
-            } catch (IOException ex) {
-                ex.printStackTrace(System.out);
-            }
-            JOptionPane.showMessageDialog(null,"Iniciando Sesión");
-        }
-        else{
-            
-            JOptionPane.showMessageDialog(null,"Revisar Usuario y Contraseña","Error", JOptionPane.WARNING_MESSAGE);
-        }     
-    }
 
     @FXML
     private void mostrarMensaje(javafx.event.ActionEvent event) {
         Pattern expresion = Pattern.compile("^[a-z]{5}[0-9]{1,2}");
         Matcher validator = expresion.matcher(etiquetaUsuario.getText());
         if(!etiquetaUsuario.getText().isEmpty() && validator.matches() && !etiquetaContra.getText().isEmpty()){
-            /*En esta parte metemos la vista*/
             try {
-                
-                Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("/mx/edu/uacm/vistasFXML/menuFXML.fxml"));
+                Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/menuFXML.fxml"));
                 Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-                /*
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("menuFXML.fxml"));
-                Parent root = loader.load();
-               // MenuFXMLController ventanaMenu = (MenuFXMLController)loader.getController();
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.show();
-                Stage nuevoStage = (Stage) btnLogin.getScene().getWindow();
-                nuevoStage.close();*/
+              
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
-            JOptionPane.showMessageDialog(null,"Iniciando Sesión");
         }
         else{
             
