@@ -31,7 +31,7 @@
 #btnBuscar{
     -fx-border-radius: 12px;
     -fx-background-color: #00B050;
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-size: 15px;
     -fx-border-color: white;
     -fx-font-family: "Arial Black"

@@ -77,6 +77,17 @@ public class Prestamo {
     public void setPeriodo(int periodo) {
         this.periodo = periodo;
     }
+
+    @Override
+    public String toString() {
+        return "==== Datos =====" + 
+               "\nId: " + id + 
+               "\nCliente: " + cliente.getNombre() + 
+               "\nAval: " + aval.getNombre() + 
+               "\nMontoSolicitado: " + montoSolicitado + 
+               "\nTotal a Pagar: " + totalPago + 
+               "\nPeriodo=" + periodo;
+    }
     
     
     

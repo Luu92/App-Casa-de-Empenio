@@ -53,32 +53,49 @@ public class GestionarPrestamoCrearFXMLController implements Initializable {
     @FXML
     private Button btnCancelar;
 
+    private float solicitado;
+    private float totalPagoFinal;
+
+    MenuItem plazo1 = new MenuItem("3");
+    MenuItem plazo2 = new MenuItem("6");
+    MenuItem plazo3 = new MenuItem("9");
+    MenuItem plazo4 = new MenuItem("12");
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       int num1 = 1;
-       int num2 = 1000;
-       idPrestamo.setText("P-" + (int)Math.floor(Math.random()*(num1-num2)+num2));
-        MenuItem plazo1 = new MenuItem("3");
-        MenuItem plazo2 = new MenuItem("6");
-        MenuItem plazo3 = new MenuItem("9");
-        MenuItem plazo4 = new MenuItem("12");
-       plazoPago.getItems().add(plazo1);
-       plazoPago.getItems().add(plazo2);
-       plazoPago.getItems().add(plazo3);
-       plazoPago.getItems().add(plazo4);
-    }    
+        int num1 = 1;
+        int num2 = 1000;
+        idPrestamo.setText("P-" + (int) Math.floor(Math.random() * (num1 - num2) + num2));
+        plazoPago.getItems().add(plazo1);
+        plazoPago.getItems().add(plazo2);
+        plazoPago.getItems().add(plazo3);
+        plazoPago.getItems().add(plazo4);
+
+       
+        plazo1.setOnAction(event -> {
+            plazoPago.setText("3");
+        });
+        plazo2.setOnAction(event -> {
+            plazoPago.setText("6");
+        });
+        plazo3.setOnAction(event -> {
+            plazoPago.setText("9");
+        });
+        plazo4.setOnAction(event -> {
+            plazoPago.setText("12");
+        });
+
+    }
 
     @FXML
     private void guardarRegistro(MouseEvent event) {
-        Cliente nuevoCliente = new Cliente(clienteNombre.getText(), clienteApellido.getText());
-        Aval nuevoAval = new Aval(avalNombre.getText(),avalApellido.getText());
-        Prestamo nuevoPrestamo = new Prestamo();
-        float solicitado = Float.valueOf(cantidadField.getText());
-        float totalPago = solicitado;
-        
+        asignarItem();
+
+        //GestionarPrestamoConsultarFXMLController controlador = new GestionarPrestamoConsultarFXMLController();
+
     }
 
     @FXML
@@ -94,5 +111,36 @@ public class GestionarPrestamoCrearFXMLController implements Initializable {
             ex.printStackTrace();
         }
     }
-    
+
+    public void asignarItem() {
+        Cliente nuevoCliente = new Cliente(clienteNombre.getText(), clienteApellido.getText());
+        Aval nuevoAval = new Aval(avalNombre.getText(), avalApellido.getText());
+        solicitado = Float.valueOf(cantidadField.getText());
+
+        if (plazoPago.getText().equals("3")) {
+            totalPagoFinal = (float) ((solicitado / 3) * 1.5) + solicitado;
+            totalPago.setText("$ " + String.valueOf(totalPagoFinal));
+            Prestamo nuevoPrestamo = new Prestamo(idPrestamo.getText(), nuevoCliente, nuevoAval, solicitado, totalPagoFinal, 3);
+            System.out.println(nuevoPrestamo.toString());
+        } 
+        if (plazoPago.getText().equals("6")) {
+            totalPagoFinal = (float) ((solicitado / 0.6) * 2.5) + solicitado;
+            totalPago.setText("$ " + String.valueOf(totalPagoFinal));
+            Prestamo nuevoPrestamo = new Prestamo(idPrestamo.getText(), nuevoCliente, nuevoAval, solicitado, totalPagoFinal, 6);
+            System.out.println(nuevoPrestamo.toString());
+        }
+        if (plazoPago.getText().equals("9")) {
+            totalPagoFinal = (float) ((solicitado / 0.9) * 2.5) + solicitado;
+            totalPago.setText("$ " + String.valueOf(totalPagoFinal));
+            Prestamo nuevoPrestamo = new Prestamo(idPrestamo.getText(), nuevoCliente, nuevoAval, solicitado, totalPagoFinal, 9);
+            System.out.println(nuevoPrestamo.toString());
+        }
+        if (plazoPago.getText().equals("12")) {
+            totalPagoFinal = (float) ((solicitado / 0.12) * 3.0) + solicitado;
+            totalPago.setText("$ " + String.valueOf(totalPagoFinal));
+            Prestamo nuevoPrestamo = new Prestamo(idPrestamo.getText(), nuevoCliente, nuevoAval, solicitado, totalPagoFinal, 12);
+            System.out.println(nuevoPrestamo.toString());
+        }    
+    }
+
 }

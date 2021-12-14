@@ -7,6 +7,7 @@ package mx.edu.uacm.controladoresFXML;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import mx.edu.uacm.ModelDTO.Cliente;
+import mx.edu.uacm.ModelDTO.Prestamo;
 
 /**
  * FXML Controller class
@@ -33,12 +35,15 @@ public class GestionarPrestamoConsultarFXMLController implements Initializable {
     @FXML
     private Button btnBuscar;
 
+    public List<Prestamo> listaPrestamos;    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+        
     }    
 
     @FXML
