@@ -125,12 +125,8 @@ public class GestionarPersonalAltaFXMLController implements Initializable {
     @FXML
     private void btnRegresar(MouseEvent event) {
         try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("GestionarPersonalFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPersonaFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            GestionarPersonalFXMLController controlador = (GestionarPersonalFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
 

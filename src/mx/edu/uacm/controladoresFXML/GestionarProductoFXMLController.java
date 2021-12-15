@@ -25,8 +25,6 @@ import javafx.scene.layout.Pane;
 public class GestionarProductoFXMLController implements Initializable {
 
     @FXML
-    private Label label;
-    @FXML
     private Pane paneTitle;
     @FXML
     private Label lbTitle;
@@ -47,7 +45,7 @@ public class GestionarProductoFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void btnseleccionaAlta(MouseEvent event) {
@@ -55,9 +53,6 @@ public class GestionarProductoFXMLController implements Initializable {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoAltaFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            //GestionarProductoAltaFXMLController controlador = (GestionarProductoAltaFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
 
@@ -68,16 +63,11 @@ public class GestionarProductoFXMLController implements Initializable {
 
     @FXML
     private void btnseleccionaBaja(MouseEvent event) {
-         try {
-
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoBajaFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            GestionarProductoBajaFXMLController controlador = (GestionarProductoBajaFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -85,14 +75,10 @@ public class GestionarProductoFXMLController implements Initializable {
 
     @FXML
     private void btnseleccionaModificar(MouseEvent event) {
-        
-         try {
 
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoModificarFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            //GestionarProductoAltaFXMLController controlador = (GestionarProductoAltaFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
 
@@ -107,16 +93,28 @@ public class GestionarProductoFXMLController implements Initializable {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoConsultaFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
             GestionarProductoConsultaFXMLController controlador = (GestionarProductoConsultaFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+
     }
-    
+
+    @FXML
+    private void regresa(MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/menuFXML.fxml"));
+            AnchorPane root = (AnchorPane) loader.load();
+            ap.getChildren().clear();
+            ap.getChildren().add(root);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }

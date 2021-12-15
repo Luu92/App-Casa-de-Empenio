@@ -63,16 +63,10 @@ public class LoginController implements Initializable {
                 AnchorPane root = (AnchorPane) loader.load();
 
                 MenuFXMLController controlador = (MenuFXMLController) loader.getController();
+                controlador.setIdUsuario(etiquetaUsuario.getText());
                 ap.getChildren().clear();
                 ap.getChildren().add(root);
                 
-                /*
-                Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/menuFXML.fxml"));
-                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-                */
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

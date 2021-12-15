@@ -121,17 +121,20 @@ public class GestionarPersonalModificarFXMLController implements Initializable {
 
     @FXML
     private void btnmodificarRegistro(MouseEvent event) {
-         try{
-                int numero = rp.buscaNumEmpleado(leerNumeroEmpleado());
-                p = new Personal(Integer.parseInt(tfNumero.getText().trim()), tfNombre.getText().trim(),tfApellido.getText().trim() ,tfEdad.getText().trim(), tfTelefono.getText().trim());
-                
-                if(numero == -1)rp.agregarRegistro(p);
-                else rp.modificarRegistro(numero, p);
-                
-                grabar_txt();
-                JOptionPane.showMessageDialog(null, "Modificacion Exitosa","Alta de Personal",JOptionPane.INFORMATION_MESSAGE);
-            
-        }catch(Exception ex){
+        try {
+            int numero = rp.buscaNumEmpleado(leerNumeroEmpleado());
+            p = new Personal(Integer.parseInt(tfNumero.getText().trim()), tfNombre.getText().trim(), tfApellido.getText().trim(), tfEdad.getText().trim(), tfTelefono.getText().trim());
+
+            if (numero == -1) {
+                rp.agregarRegistro(p);
+            } else {
+                rp.modificarRegistro(numero, p);
+            }
+
+            grabar_txt();
+            JOptionPane.showMessageDialog(null, "Modificacion Exitosa", "Alta de Personal", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (Exception ex) {
             mensaje(ex.getMessage());
         }
     }
@@ -139,12 +142,8 @@ public class GestionarPersonalModificarFXMLController implements Initializable {
     @FXML
     private void btnseleccionaRegresar(MouseEvent event) {
         try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("GestionarPersonalFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPersonaFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            GestionarPersonalFXMLController controlador = (GestionarPersonalFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
 
@@ -196,42 +195,42 @@ public class GestionarPersonalModificarFXMLController implements Initializable {
         tvTabla.setItems(listaPersonal);
 
     }
-    
-    public int leerNumeroEmpleado(){
-        try{
+
+    public int leerNumeroEmpleado() {
+        try {
             int numero = Integer.parseInt(tfNumero.getText().trim());
             return numero;
-        }catch(Exception ex){
+        } catch (Exception ex) {
             return -666;
         }
     }
-    
-     public void grabar_txt(){
+
+    public void grabar_txt() {
         FileWriter fw;
         PrintWriter pw;
-        try{
+        try {
             fw = new FileWriter(ruta_txt);
             pw = new PrintWriter(fw);
-            
-            for(int i = 0; i < rp.cantidadRegistro(); i++){
+
+            for (int i = 0; i < rp.cantidadRegistro(); i++) {
                 p = rp.obtenerRegistro(i);
-                pw.println(String.valueOf(p.getNumEmpleado()+", "+p.getNombre()+", "+p.getApellido()+", "+p.getEdad()+", "+p.getTelefono()));
+                pw.println(String.valueOf(p.getNumEmpleado() + ", " + p.getNombre() + ", " + p.getApellido() + ", " + p.getEdad() + ", " + p.getTelefono()));
             }
-             pw.close();
-            
-        }catch(IOException | HeadlessException ex){
-            mensaje("Error al grabar archivo: "+ex.getMessage());
+            pw.close();
+
+        } catch (IOException | HeadlessException ex) {
+            mensaje("Error al grabar archivo: " + ex.getMessage());
             System.out.println(ex.getMessage());
         }
     }
-     
-    public void vaciarCampos(){
+
+    public void vaciarCampos() {
         tfNombre.setText(null);
         tfApellido.setText(null);
         tfEdad.setText(null);
         tfTelefono.setText(null);
         tfNumero.setText(null);
-        
-    } 
-    
+
+    }
+
 }

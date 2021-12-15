@@ -19,8 +19,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import mx.edu.uacm.ModelDTO.Cliente;
 import mx.edu.uacm.ModelDTO.Prestamo;
 
 /**
@@ -36,6 +36,8 @@ public class GestionarPrestamoConsultarFXMLController implements Initializable {
     private Button btnBuscar;
 
     public List<Prestamo> listaPrestamos;    
+    @FXML
+    private AnchorPane ap;
     /**
      * Initializes the controller class.
      */

@@ -44,17 +44,14 @@ public class MenuFXMLController implements Initializable {
     private AnchorPane ap;
 
     public void setIdUsuario(String idUsuario) {
-        this.idUsuario.setText("Hola");
+        this.idUsuario.setText(idUsuario);
     }
 
     @FXML
     private void gestionarPersonal(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPersonalFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPersonaFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            //GestionarPersonalAltaFXMLController controlador = (GestionarPersonalAltaFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
 
@@ -67,14 +64,10 @@ public class MenuFXMLController implements Initializable {
     @FXML
     private void gestionarCompra(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoFXML.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProducto2FXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
-
-            GestionarProductoFXMLController controlador = (GestionarProductoFXMLController) loader.getController();
-
             ap.getChildren().clear();
             ap.getChildren().add(root);
-
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -85,7 +78,7 @@ public class MenuFXMLController implements Initializable {
     private void gestionarPrestamo(ActionEvent event) {
 
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/gestionarPrestamoFXML.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/GestionarPrestamoFXML.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -102,7 +95,7 @@ public class MenuFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        idUsuario.setText("Hola");
+        
     }
 
 }

@@ -17,7 +17,7 @@
                 <Label fx:id="lbTitle" layoutX="33.0" layoutY="11.0" text="Seleccione la operación" />
             </children>
         </Pane>
-        <ImageView fitHeight="164.0" fitWidth="194.0" layoutX="14.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="164.0" fitWidth="194.0" layoutX="14.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../img/Fondo.jpeg" />
             </image>
@@ -46,5 +46,10 @@
                 <Image url="@../img/informacion-personal.png" />
             </image>
         </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="113.0" layoutX="60.0" layoutY="293.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/flecha-izquierda.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

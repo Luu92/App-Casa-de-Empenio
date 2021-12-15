@@ -71,17 +71,11 @@ public class GestionarProductoConsultaFXMLController implements Initializable {
     @FXML
     private void btnseleccionaRegresar(MouseEvent event) {
          try{
-	        
-	    FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoFXML.fxml"));
+	    FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProducto2FXML.fxml"));
 	    AnchorPane root = (AnchorPane)loader.load();	
-	        	
-	    GestionarProductoFXMLController controlador = (GestionarProductoFXMLController)loader.getController();
-
 	    ap.getChildren().clear();
-	    ap.getChildren().add(root);
-			      
+	    ap.getChildren().add(root);      
 	    } catch (IOException e) {
-
 		e.printStackTrace();
 	    }       
     }
