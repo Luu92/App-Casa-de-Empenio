@@ -46,6 +46,18 @@ public class MenuFXMLController implements Initializable {
     
     @FXML
     private void gestionarPersonal(ActionEvent event) {
+         try {
+                Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/GestionarPersonalFXML.fxml"));
+                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+              
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+    
+    
     }
 
     @FXML

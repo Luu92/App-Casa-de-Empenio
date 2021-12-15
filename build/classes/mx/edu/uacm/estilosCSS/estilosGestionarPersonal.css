@@ -1,0 +1,136 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+#paneTitle{
+    -fx-background-color: #00B050;
+}
+
+#taTitle{
+    -fx-background-color: #00B050;
+}
+
+#tfNumero{
+    -fx-textFill:#dd0a0a;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;   
+}
+
+#lbTitle{
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+#lbSubtitle{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+#btnAlta:hover{
+    -fx-background-color: #3042E3;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnBaja:hover{
+    -fx-background-color: #FA4182;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnMod:hover{
+    -fx-background-color: #16FFE4;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnCons:hover{
+    -fx-background-color: #FBF000;
+    -fx-border-radius: 15px;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black"
+}
+
+#btnAgregar{
+    -fx-background-color: #00B050;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"
+}
+
+#btnRegresar{
+    -fx-background-color: #00B050;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"
+}
+
+#lbNombre{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"
+}
+
+#lbApellido{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"    
+}
+
+#lbEdad{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"    
+}
+
+#lbTel{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"    
+}
+
+#lbEmpleado{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"    
+}
+
+#lbNumero{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"
+}
+
+#lbTitle1{
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;    
+}
+
+#lbTitle3{
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;    
+}
+
+#lbTitle2{
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;    
+}
+
+#btnBajaEmp{
+    -fx-background-color: #00B050;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"
+}
+
+#btnActualizar{
+    -fx-background-color: #00B050;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black"
+}
+
+
