@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import mx.edu.uacm.AModSoft.CasadeEmpeño.CasaEmpeño;
 
@@ -37,27 +38,37 @@ public class MenuFXMLController implements Initializable {
     private Button btnGesCompra;
     @FXML
     private Button btnGesPrestamo;
-    
+
     public String usuario;
+    @FXML
+    private AnchorPane ap;
 
     public void setIdUsuario(String idUsuario) {
         this.idUsuario.setText("Hola");
     }
-    
+
     @FXML
     private void gestionarPersonal(ActionEvent event) {
-         try {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPersonalFXML.fxml"));
+            AnchorPane root = (AnchorPane) loader.load();
+
+            //GestionarPersonalAltaFXMLController controlador = (GestionarPersonalAltaFXMLController) loader.getController();
+
+            ap.getChildren().clear();
+            ap.getChildren().add(root);
+
+            /*
                 Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/GestionarPersonalFXML.fxml"));
                 Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-              
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-    
-    
+             */
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
     }
 
     @FXML
@@ -66,18 +77,18 @@ public class MenuFXMLController implements Initializable {
 
     @FXML
     private void gestionarPrestamo(ActionEvent event) {
-        
+
         try {
-                Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/gestionarPrestamoFXML.fxml"));
-                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-              
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/gestionarPrestamoFXML.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
     }
 
     /**

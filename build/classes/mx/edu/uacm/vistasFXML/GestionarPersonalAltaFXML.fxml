@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPersonalAltaFXMLController">
+    <children>
+        <Pane fx:id="paneTitle" prefHeight="400.0" prefWidth="163.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css">
+            <children>
+                <Label fx:id="lbTitle1" layoutX="11.0" layoutY="69.0" prefHeight="68.0" prefWidth="122.0" text="Nuevo">
+                    
+                </Label>
+                <Label fx:id="lbTitle2" layoutX="11.0" layoutY="127.0" text="Registro">
+                   
+                </Label>
+                <ImageView fitHeight="97.0" fitWidth="141.0" layoutX="33.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/personas.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label fx:id="lbNombre" layoutX="183.0" layoutY="41.0" text="Nombre:" />
+        <TextField fx:id="tfNombre" layoutX="183.0" layoutY="63.0" />
+        <Label fx:id="lbApellido" layoutX="183.0" layoutY="107.0" text="Apellidos:" />
+        <TextField fx:id="tfApellido" layoutX="183.0" layoutY="132.0" />
+        <Label fx:id="lbEdad" layoutX="183.0" layoutY="183.0" text="Edad:" />
+        <Label fx:id="lbTel" layoutX="183.0" layoutY="264.0" text="Telefono:" />
+        <TextField fx:id="tfTel" layoutX="183.0" layoutY="287.0" />
+        <ComboBox fx:id="cbEdad" layoutX="183.0" layoutY="206.0" prefHeight="25.0" prefWidth="76.0" promptText="Edad" />
+        <Label fx:id="lbEmpleado" layoutX="354.0" layoutY="58.0" text="Número de empleado:" />
+        <ImageView fx:id="imgEmp" fitHeight="207.0" fitWidth="192.0" layoutX="369.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/empleados.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="btnAgregar" layoutX="369.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnRegistrar" text="Agregar" />
+        <Button fx:id="btnRegresar" layoutX="484.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnRegresar" text="Regresar" />
+        <Label fx:id="tfNumero" layoutX="529.0" layoutY="57.0" prefHeight="25.0" prefWidth="62.0" stylesheets="@style.css" textFill="#ee0c0c" />
+    </children>
+</AnchorPane>

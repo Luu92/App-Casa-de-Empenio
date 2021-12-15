@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package mx.edu.uacm.controladoresFXML;
 
 import java.awt.HeadlessException;
@@ -12,36 +17,61 @@ import java.util.ResourceBundle;
 import java.util.StringTokenizer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javax.swing.JOptionPane;
 import mx.edu.uacm.ModelDTO.Crud;
 import mx.edu.uacm.ModelDTO.Personal;
 import mx.edu.uacm.ModelDTO.ValidarDatos;
 
 /**
+ * FXML Controller class
  *
- * @author Internet
+ * @author DevLuu
  */
-class FXMLPersonalAltaController {
+public class GestionarPersonalAltaFXMLController implements Initializable {
 
-    @FXML
-    private Button btnRegresar;
-    @FXML
-    public ComboBox<String> cbEdad;
-    @FXML
-    public TextField tfNombre;
-    @FXML
-    public TextField tfApellido;
-    @FXML
-    public TextField tfTel;
     @FXML
     private AnchorPane ap;
     @FXML
-    public Label tfNumero;
+    private Pane paneTitle;
+    @FXML
+    private Label lbTitle1;
+    @FXML
+    private Label lbTitle2;
+    @FXML
+    private Label lbNombre;
+    @FXML
+    private TextField tfNombre;
+    @FXML
+    private Label lbApellido;
+    @FXML
+    private TextField tfApellido;
+    @FXML
+    private Label lbEdad;
+    @FXML
+    private Label lbTel;
+    @FXML
+    private TextField tfTel;
+    @FXML
+    private ComboBox<String> cbEdad;
+    @FXML
+    private Label lbEmpleado;
+    @FXML
+    private ImageView imgEmp;
+    @FXML
+    private Button btnAgregar;
+    @FXML
+    private Button btnRegresar;
+    @FXML
+    private Label tfNumero;
 
     File ruta;
     String generaEmpString;
@@ -55,20 +85,48 @@ class FXMLPersonalAltaController {
     Personal p = new Personal();
     ValidarDatos d = new ValidarDatos();
 
-    //@Override
+    /**
+     * Initializes the controller class.
+     */
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
         cbEdad.getItems().addAll(edad);
         cargar_txt();
         generaNoEmpleado();
         leerNumeroEmpleado();
+    }
+
+    @FXML
+    private void btnRegistrar(MouseEvent event) {
+        try {
+            if (tfNombre.getText().isEmpty() || !ValidarDatos.validarNombre(tfNombre.getText())) {
+                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Nombre", JOptionPane.INFORMATION_MESSAGE);
+            } else if (tfApellido.getText().isEmpty() || !ValidarDatos.validarApellidos(tfApellido.getText())) {
+                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Apellido", JOptionPane.INFORMATION_MESSAGE);
+            } else if (cbEdad.getValue().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Edad", JOptionPane.INFORMATION_MESSAGE);
+            } else if (tfTel.getText().isEmpty() || !ValidarDatos.validarTelefono(tfTel.getText())) {
+                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Telefono", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                p = new Personal(leerNumeroEmpleado(), leerNombre(), leerApellido(), leerEdad(), leerTelefono());
+                rp.agregarRegistro(p);
+
+                grabar_txt();
+                vaciarCampos();
+                Crud n = new Crud();
+                JOptionPane.showMessageDialog(null, "¡Empleado Agregado!", "Alta de Personal", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } catch (Exception ex) {
+            mensaje(ex.getMessage());
+        }
 
     }
-    
+
     @FXML
-    private void seleccionaRegresar() {
+    private void btnRegresar(MouseEvent event) {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLGestionar_Personal.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("GestionarPersonalFXML.fxml"));
             AnchorPane root = (AnchorPane) loader.load();
 
             GestionarPersonalFXMLController controlador = (GestionarPersonalFXMLController) loader.getController();
@@ -80,6 +138,7 @@ class FXMLPersonalAltaController {
 
             e.printStackTrace();
         }
+
     }
 
     public void cargar_txt() {
@@ -101,7 +160,7 @@ class FXMLPersonalAltaController {
                 rp.agregarRegistro(p);
             }
             bu.close();
-        } catch (IOException | NumberFormatException ex) {
+        } catch (Exception ex) {
             mensaje("Error al cargar archivo: " + ex.getMessage());
             System.out.println(ex.getMessage());
         }
@@ -125,53 +184,28 @@ class FXMLPersonalAltaController {
             System.out.println(ex.getMessage());
         }
     }
-
-    @FXML
-    public void ingresarRegistro() {
-        try {
-            if (tfNombre.getText().isEmpty() || !ValidarDatos.validarNombre(tfNombre.getText())) {
-                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Nombre", JOptionPane.INFORMATION_MESSAGE);
-            } else if (tfApellido.getText().isEmpty() || !ValidarDatos.validarApellidos(tfApellido.getText())) {
-                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Apellido", JOptionPane.INFORMATION_MESSAGE);
-            } else if (cbEdad.getValue().isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Edad", JOptionPane.INFORMATION_MESSAGE);
-            } else if (tfTel.getText().isEmpty() || !ValidarDatos.validarTelefono(tfTel.getText())) {
-                JOptionPane.showMessageDialog(null, "Campo vacio o formato incorrecto", "Telefono", JOptionPane.INFORMATION_MESSAGE);
-            } else {
-                p = new Personal(leerNumeroEmpleado(), leerNombre(), leerApellido(), leerEdad(), leerTelefono());
-                rp.agregarRegistro(p);
-
-                grabar_txt();
-                vaciarCampos();
-                Crud n = new Crud();
-                JOptionPane.showMessageDialog(null, "¡Empleado Agregado!", "Alta de Personal", JOptionPane.INFORMATION_MESSAGE);
-            }
-        } catch (Exception ex) {
-            mensaje(ex.getMessage());
-        }
-    }
-
-    public int leerNumeroEmpleado() {
+    
+    public int leerNumeroEmpleado(){  
         String num = generaEmpString;
-        try {
+        try{
             tfNumero.setText(num);
-            int numero = Integer.parseInt(num);
+            int numero=Integer.parseInt(num);
             return numero;
-        } catch (Exception ex) {
+        }catch(Exception ex){
             return -666;
         }
     }
-
-    public String leerNombre() {
-        try {
+    
+    public String leerNombre(){
+        try{
             String nombre = tfNombre.getText().trim();
             return nombre;
-        } catch (Exception ex) {
+        }catch(Exception ex){
             return null;
         }
     }
-
-    public String leerApellido() {
+    
+    public String leerApellido(){
         try {
             String apellido = tfApellido.getText().trim();
             return apellido;
@@ -179,49 +213,48 @@ class FXMLPersonalAltaController {
             return null;
         }
     }
-
-    public String leerEdad() {
-        try {
+    
+    public String leerEdad(){
+        try{
             String edadPersonal = cbEdad.getValue().trim();
             return edadPersonal;
-        } catch (Exception ex) {
+        }catch(Exception ex){
             return null;
         }
     }
-
-    public String leerTelefono() {
-        try {
+    
+    public String leerTelefono(){
+        try{
             String tel = tfTel.getText().trim();
             return tel;
-        } catch (Exception ex) {
+        }catch(Exception ex){
             return null;
         }
     }
-
-    public void mensaje(String texto) {
+        
+    public void mensaje(String texto){
         JOptionPane.showMessageDialog(null, texto);
-
+        
     }
-
-    public void vaciarCampos() {
+    
+    public void vaciarCampos(){
         tfNombre.setText(null);
         tfApellido.setText(null);
         cbEdad.setValue(null);
         tfTel.setText(null);
         generaNoEmpleado();
         tfNumero.setText(generaEmpString);
-
-    }
-
-    public String generaNoEmpleado() {
-        int M = 1000;
-        int N = 9999;
-        int generaNumero = (int) Math.floor(Math.random() * (N - M + 1) + M);
-        generaEmpString = String.valueOf(generaNumero);
-
-        return generaEmpString;
+        
     }
     
+    public String generaNoEmpleado(){
+        int M=1000;
+        int N=9999;
+        int generaNumero = (int) Math.floor(Math.random()*(N-M+1)+M);
+        generaEmpString = String.valueOf(generaNumero);
+        
+        return generaEmpString;
+    }
     
 
 }

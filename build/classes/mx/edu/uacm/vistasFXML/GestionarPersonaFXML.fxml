@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPersonalFXMLController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <Pane fx:id="paneTitle" layoutX="-1.0" prefHeight="74.0" prefWidth="600.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css">
+            <children>
+                <Label fx:id="lbTitle" layoutX="33.0" layoutY="11.0" text="Seleccione la operación" />
+            </children>
+        </Pane>
+        <ImageView fitHeight="164.0" fitWidth="194.0" layoutX="14.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/Fondo.jpeg" />
+            </image>
+        </ImageView>
+        <Button id="btnAlta" fx:id="btnAlta" alignment="BOTTOM_CENTER" layoutX="228.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#altaPersonal" prefHeight="105.0" prefWidth="124.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Nuevo Personal" textAlignment="CENTER" />
+        <Button id="btnBaja" fx:id="btnBaja" alignment="BOTTOM_CENTER" layoutX="418.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#bajaPersona" prefHeight="105.0" prefWidth="124.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Baja Personal" />
+        <Button id="btnMod" fx:id="btnMod" alignment="BOTTOM_CENTER" layoutX="230.0" layoutY="225.0" mnemonicParsing="false" onMouseClicked="#seleccionaModificar" prefHeight="105.0" prefWidth="124.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Modificar Personal" />
+        <Button id="btnCons" fx:id="btnCons" alignment="BOTTOM_CENTER" layoutX="419.0" layoutY="225.0" mnemonicParsing="false" onMouseClicked="#seleccionaConsultar" prefHeight="105.0" prefWidth="124.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Consultar Personal" />
+        <ImageView fitHeight="64.0" fitWidth="91.0" layoutX="247.0" layoutY="105.0">
+            <image>
+                <Image url="@../img/personas.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="74.0" fitWidth="98.0" layoutX="432.0" layoutY="101.0">
+            <image>
+                <Image url="@../img/hombre.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="74.0" fitWidth="98.0" layoutX="243.0" layoutY="233.0">
+            <image>
+                <Image url="@../img/modificar%20personal.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="74.0" fitWidth="69.0" layoutX="447.0" layoutY="233.0">
+            <image>
+                <Image url="@../img/informacion-personal.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

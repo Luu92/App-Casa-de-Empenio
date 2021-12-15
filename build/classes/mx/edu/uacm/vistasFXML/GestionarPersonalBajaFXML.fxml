@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPersonalBajaFXMLController">
+    <children>
+      <Pane fx:id="paneTitle" prefHeight="400.0" prefWidth="163.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css">
+         <children>
+            <Label fx:id="lbTitle1" layoutX="13.0" layoutY="76.0" text="Baja" />
+            <Label fx:id="lbTitle2" layoutX="12.0" layoutY="123.0" text="Personal" />
+            <ImageView fitHeight="150.0" fitWidth="135.0" layoutX="14.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/hombre.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="73.0" fitWidth="76.0" layoutX="504.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/baja2.png" />
+         </image></ImageView>
+      <Button fx:id="btnBajaEmp" layoutX="209.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#btnborrarRegistro" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Dar de baja" />
+      <Button fx:id="btnRegresar" layoutX="490.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#btnRegresar" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Regresar" />
+      <TableView fx:id="tvPersonal" layoutX="178.0" layoutY="120.0" onMouseClicked="#seleccionaRegistro" prefHeight="200.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="tcNumero" prefWidth="88.0" text="No.Empleado" />
+          <TableColumn fx:id="tcNombre" prefWidth="62.0" text="Nombre" />
+            <TableColumn fx:id="tcApellido" prefWidth="115.0" text="Apellidos" />
+            <TableColumn fx:id="tcEdad" prefWidth="35.0" text="Edad" />
+            <TableColumn fx:id="tcTel" prefWidth="111.0" text="Telefono" />
+        </columns>
+      </TableView>
+      <Label fx:id="titulosCabeza" layoutX="255.0" layoutY="21.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Selecciona el registro">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></Label>
+      <Label fx:id="titulosCabeza2" layoutX="261.0" layoutY="57.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="que deseas eliminar">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

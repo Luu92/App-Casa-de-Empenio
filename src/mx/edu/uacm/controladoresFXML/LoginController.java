@@ -19,6 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
@@ -36,6 +37,8 @@ public class LoginController implements Initializable {
     private TextField etiquetaUsuario;
     @FXML
     private PasswordField etiquetaContra;
+    @FXML
+    private AnchorPane ap;
 
     public TextField getEtiquetaUsuario() {
         return etiquetaUsuario;
@@ -55,12 +58,21 @@ public class LoginController implements Initializable {
         Matcher validator = expresion.matcher(etiquetaUsuario.getText());
         if(!etiquetaUsuario.getText().isEmpty() && validator.matches() && !etiquetaContra.getText().isEmpty()){
             try {
+                
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/menuFXML.fxml"));
+                AnchorPane root = (AnchorPane) loader.load();
+
+                MenuFXMLController controlador = (MenuFXMLController) loader.getController();
+                ap.getChildren().clear();
+                ap.getChildren().add(root);
+                
+                /*
                 Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/menuFXML.fxml"));
                 Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-              
+                */
             } catch (IOException ex) {
                 ex.printStackTrace();
             }

@@ -9,33 +9,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="345.0" prefWidth="649.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.LoginController">
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.LoginController">
     <stylesheets>
         <URL value="@/mx/edu/uacm/estilosCSS/login.css" />
     </stylesheets>
    <children>
-      <HBox layoutX="-1.0" prefHeight="350.0" prefWidth="650.0">
+      <HBox layoutX="-1.0" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Pane prefHeight="357.0" prefWidth="240.0" styleClass="contenedor" stylesheets="@../estilosCSS/login.css">
+            <Pane prefHeight="413.0" prefWidth="237.0" styleClass="contenedor" stylesheets="@../estilosCSS/login.css">
                <children>
                   <Label layoutX="11.0" layoutY="14.0" prefHeight="122.0" prefWidth="218.0" styleClass="titulo" stylesheets="@../estilosCSS/login.css" text="Casa de Empeño" textAlignment="CENTER" wrapText="true" />
-                  <ImageView fitHeight="202.0" fitWidth="196.0" layoutX="22.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="202.0" fitWidth="196.0" layoutX="22.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/intercambio.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane prefHeight="372.0" prefWidth="409.0">
+            <Pane prefHeight="396.0" prefWidth="399.0">
                <children>
-                  <TextField fx:id="etiquetaUsuario" layoutX="176.0" layoutY="108.0" prefHeight="40.0" prefWidth="196.0" promptText="Usuario" styleClass="usuarioField" stylesheets="@../estilosCSS/login.css" />
-                  <PasswordField fx:id="etiquetaContra" layoutX="176.0" layoutY="185.0" prefHeight="40.0" prefWidth="196.0" promptText="Contraseña" styleClass="contraseniaField" stylesheets="@../estilosCSS/login.css" />
-                  <ImageView fitHeight="167.0" fitWidth="153.0" layoutX="14.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                  <TextField fx:id="etiquetaUsuario" layoutX="167.0" layoutY="107.0" prefHeight="40.0" prefWidth="196.0" promptText="Usuario" styleClass="usuarioField" stylesheets="@../estilosCSS/login.css" />
+                  <PasswordField fx:id="etiquetaContra" layoutX="167.0" layoutY="180.0" prefHeight="40.0" prefWidth="196.0" promptText="Contraseña" styleClass="contraseniaField" stylesheets="@../estilosCSS/login.css" />
+                  <ImageView fitHeight="167.0" fitWidth="153.0" layoutX="14.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/acceso.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btnLogin" layoutX="198.0" layoutY="263.0" mnemonicParsing="false" onAction="#mostrarMensaje" prefHeight="40.0" prefWidth="153.0" styleClass="btnLogin" stylesheets="@../estilosCSS/login.css" text="Ingresar" />
+                  <Button fx:id="btnLogin" layoutX="189.0" layoutY="271.0" mnemonicParsing="false" onAction="#mostrarMensaje" prefHeight="40.0" prefWidth="153.0" styleClass="btnLogin" stylesheets="@../estilosCSS/login.css" text="Ingresar" />
                </children>
             </Pane>
          </children>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPersonalModificarFXMLController">
+    <children>
+      <Pane fx:id="paneTitle" prefHeight="400.0" prefWidth="168.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css">
+         <children>
+            <Label fx:id="lbTitle1" layoutX="9.0" layoutY="72.0" text="Modifica" />
+            <Label fx:id="lbTitle2" layoutX="11.0" layoutY="125.0" text="Personal" />
+            <ImageView fitHeight="111.0" fitWidth="134.0" layoutX="17.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/modificar%20personal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tvTabla" layoutX="172.0" layoutY="210.0" onMouseClicked="#tablaSeleccionaRegistro" prefHeight="141.0" prefWidth="425.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css">
+        <columns>
+          <TableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="tcApellido" prefWidth="111.0" text="Apellidos" />
+            <TableColumn fx:id="tcEdad" prefWidth="35.0" text="Edad" />
+            <TableColumn fx:id="tcTel" prefWidth="114.0" text="Telefono" />
+            <TableColumn fx:id="tcNumero" prefWidth="82.0" text="No.Empleado" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbNombre" layoutX="192.0" layoutY="27.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Nombre:" />
+      <Label fx:id="lbApellido" layoutX="192.0" layoutY="87.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Apellido:" />
+      <Label fx:id="lbTel" layoutX="191.0" layoutY="144.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Telefono:" />
+      <Label fx:id="lbEmpleado" layoutX="410.0" layoutY="27.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="No. Empleado:" />
+      <Label fx:id="lbEdad" layoutX="410.0" layoutY="87.0" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Edad:" />
+      <TextField fx:id="tfNombre" layoutX="191.0" layoutY="53.0" />
+      <TextField fx:id="tfApellido" layoutX="191.0" layoutY="113.0" />
+      <TextField fx:id="tfTelefono" layoutX="191.0" layoutY="168.0" />
+      <Button fx:id="btnActualizar" layoutX="413.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#btnmodificarRegistro" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Actualizar" />
+      <Button fx:id="btnRegresar" layoutX="510.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#btnseleccionaRegresar" stylesheets="@../estilosCSS/estilosGestionarPersonal.css" text="Regresar" />
+      <TextField fx:id="tfEdad" layoutX="410.0" layoutY="113.0" prefHeight="25.0" prefWidth="58.0" />
+      <Label fx:id="tfNumero" layoutX="411.0" layoutY="53.0" prefHeight="25.0" prefWidth="56.0" textFill="#dd0a0a" />
+   </children>
+</AnchorPane>
