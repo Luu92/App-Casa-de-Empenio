@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="mx.edu.uacm.controladoresFXML.GestionarProductoAltaFXMLController">
+    <children>
+      <Pane fx:id="paneTitle" prefHeight="400.0" prefWidth="163.0" stylesheets="@../estilosCSS/gestionarproductofxml.css">
+         <children>
+            <Label fx:id="lbTitle1" layoutX="11.0" layoutY="69.0" prefHeight="68.0" prefWidth="122.0" text="Nuevo">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTitle2" layoutX="11.0" layoutY="127.0" text="Registro">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="134.0" fitWidth="122.0" layoutX="11.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/television.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lbNombre" layoutX="183.0" layoutY="41.0" text="Nombre:" />
+      <TextField fx:id="tfNombre" layoutX="183.0" layoutY="63.0" />
+      <Label fx:id="lbMarca" layoutX="183.0" layoutY="107.0" text="Marca:" />
+      <TextField fx:id="tfMarca" layoutX="183.0" layoutY="132.0" />
+      <Label fx:id="lbCantidad" layoutX="183.0" layoutY="183.0" text="Cantidad:" />
+      <Label fx:id="lbPrecio" layoutX="183.0" layoutY="264.0" text="Precio:" />
+      <TextField fx:id="tfPrecio" layoutX="183.0" layoutY="287.0" />
+      <ComboBox fx:id="cbCantidad" layoutX="183.0" layoutY="206.0" prefHeight="25.0" prefWidth="90.0" promptText="Cantidad" />
+      <Label fx:id="lbProducto" layoutX="354.0" layoutY="58.0" text="Num Producto:" />
+      <ImageView fitHeight="207.0" fitWidth="192.0" layoutX="388.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/empleados%20(2).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAgregar" layoutX="369.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btningresarRegistro" text="Agregar" />
+      <Button fx:id="btnRegresar" layoutX="484.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnseleccionaRegresar" text="Regresar" />
+      <TextField fx:id="tfNumeroProducto" layoutX="475.0" layoutY="57.0" prefHeight="25.0" prefWidth="97.0" />
+   </children>
+</AnchorPane>

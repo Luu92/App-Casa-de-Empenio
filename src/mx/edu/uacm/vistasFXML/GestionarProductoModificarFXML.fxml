@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.GestionarProductoModificarFXMLController">
+   <children>
+      <Pane fx:id="paneTitle" prefHeight="400.0" prefWidth="168.0" stylesheets="@../estilosCSS/gestionarproductofxml.css">
+         <children>
+            <Label fx:id="lbTitle1" layoutX="9.0" layoutY="72.0" text="Modifica" />
+            <Label fx:id="lbTitle2" layoutX="11.0" layoutY="125.0" text="Producto" />
+            <ImageView fitHeight="153.0" fitWidth="149.0" layoutX="9.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/modificar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tvTabla" layoutX="172.0" layoutY="210.0" onMouseClicked="#seleccionaRegistro" prefHeight="141.0" prefWidth="425.0" stylesheets="@../estilosCSS/gestionarproductofxml.css">
+        <columns>
+          <TableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="tcMarca" prefWidth="111.0" text="Marca" />
+            <TableColumn fx:id="tcCantidad" prefWidth="35.0" text="Cantidad" />
+            <TableColumn fx:id="tcPrecio" prefWidth="114.0" text="Precio" />
+            <TableColumn fx:id="tcNumProducto" prefWidth="82.0" text="No.Producto" />
+        </columns>
+      </TableView>
+      <Label fx:id="lbNombre" layoutX="192.0" layoutY="27.0" text="Nombre:" />
+      <Label fx:id="lbMarca" layoutX="192.0" layoutY="87.0" text="Marca:" />
+      <Label fx:id="lbPrecio" layoutX="191.0" layoutY="144.0" text="Precio:" />
+      <Label fx:id="lbNumProducto" layoutX="410.0" layoutY="27.0" text="No. Producto:" />
+      <Label fx:id="lbCantidad" layoutX="410.0" layoutY="87.0" text="Cantidad:" />
+      <TextField fx:id="tfNombre" layoutX="191.0" layoutY="53.0" />
+      <TextField fx:id="tfMarca" layoutX="191.0" layoutY="113.0" />
+      <TextField fx:id="tfPrecio" layoutX="191.0" layoutY="168.0" />
+      <TextField fx:id="tfNumProducto" layoutX="410.0" layoutY="53.0" prefHeight="25.0" prefWidth="62.0" />
+      <Button fx:id="btnActualizar" layoutX="413.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#btnmodificarRegistro" stylesheets="@../estilosCSS/gestionarproductofxml.css" text="Actualizar" />
+      <Button fx:id="btnRegresar" layoutX="510.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#btnseleccionaRegresar" stylesheets="@../estilosCSS/gestionarproductofxml.css" text="Regresar" />
+      <TextField fx:id="tfCantidad" layoutX="410.0" layoutY="113.0" prefHeight="25.0" prefWidth="58.0" />
+   </children>
+</AnchorPane>

@@ -58,13 +58,6 @@ public class MenuFXMLController implements Initializable {
             ap.getChildren().clear();
             ap.getChildren().add(root);
 
-            /*
-                Parent root =  FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/GestionarPersonalFXML.fxml"));
-                Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-             */
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -73,6 +66,19 @@ public class MenuFXMLController implements Initializable {
 
     @FXML
     private void gestionarCompra(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarProductoFXML.fxml"));
+            AnchorPane root = (AnchorPane) loader.load();
+
+            GestionarProductoFXMLController controlador = (GestionarProductoFXMLController) loader.getController();
+
+            ap.getChildren().clear();
+            ap.getChildren().add(root);
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
     }
 
     @FXML
