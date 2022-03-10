@@ -116,11 +116,14 @@ public class GestionarPrestamoCrearFXMLController implements Initializable {
         Cliente nuevoCliente = new Cliente(clienteNombre.getText(), clienteApellido.getText());
         Aval nuevoAval = new Aval(avalNombre.getText(), avalApellido.getText());
         solicitado = Float.valueOf(cantidadField.getText());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPrestamoConsultarFXML.fxml"));
+        GestionarPrestamoConsultarFXMLController controlador = (GestionarPrestamoConsultarFXMLController) loader.getController();
 
         if (plazoPago.getText().equals("3")) {
             totalPagoFinal = (float) ((solicitado / 3) * 1.5) + solicitado;
             totalPago.setText("$ " + String.valueOf(totalPagoFinal));
             Prestamo nuevoPrestamo = new Prestamo(idPrestamo.getText(), nuevoCliente, nuevoAval, solicitado, totalPagoFinal, 3);
+            controlador.getListaPrestamos().add(nuevoPrestamo);
             System.out.println(nuevoPrestamo.toString());
         } 
         if (plazoPago.getText().equals("6")) {

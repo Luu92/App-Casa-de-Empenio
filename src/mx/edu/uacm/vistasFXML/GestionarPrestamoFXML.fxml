@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPrestamoFXMLController">
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="350.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.uacm.controladoresFXML.GestionarPrestamoFXMLController">
     <stylesheets>
         <URL value="@/mx/edu/uacm/estilosCSS/gestionarprestamofxml.css" />
     </stylesheets>

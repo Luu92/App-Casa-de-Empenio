@@ -38,6 +38,16 @@ public class GestionarPrestamoConsultarFXMLController implements Initializable {
     public List<Prestamo> listaPrestamos;    
     @FXML
     private AnchorPane ap;
+
+    public List<Prestamo> getListaPrestamos() {
+        return listaPrestamos;
+    }
+
+    public void setListaPrestamos(List<Prestamo> listaPrestamos) {
+        this.listaPrestamos = listaPrestamos;
+    }
+    
+    
     /**
      * Initializes the controller class.
      */

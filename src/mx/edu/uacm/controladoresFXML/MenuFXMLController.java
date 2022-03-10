@@ -71,12 +71,21 @@ public class MenuFXMLController implements Initializable {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        
+
     }
 
     @FXML
     private void gestionarPrestamo(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/mx/edu/uacm/vistasFXML/GestionarPrestamoFXML.fxml"));
+            AnchorPane root = (AnchorPane) loader.load();
+            ap.getChildren().clear();
+            ap.getChildren().add(root);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
 
+        /*
         try {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("mx/edu/uacm/vistasFXML/GestionarPrestamoFXML.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -87,7 +96,7 @@ public class MenuFXMLController implements Initializable {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
+         */
     }
 
     /**
@@ -95,7 +104,7 @@ public class MenuFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
     }
 
 }

@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -32,6 +33,8 @@ public class GestionarPrestamoFXMLController implements Initializable {
     private Button btnConsultar;
     @FXML
     private ImageView btnRegresar;
+    @FXML
+    private AnchorPane ap;
 
     /**
      * Initializes the controller class.
